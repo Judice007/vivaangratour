@@ -14,6 +14,9 @@ const preview = document.querySelector("#message-preview");
 const whatsappLinks = document.querySelectorAll("[data-whatsapp-link]");
 const instagramLinks = document.querySelectorAll("[data-instagram-link]");
 const tourLinks = document.querySelectorAll("[data-tour-link]");
+const revealItems = document.querySelectorAll(
+  ".section-heading, .route-strip div, .route-gallery, .tour-card, .mood-copy, .mood-card, .confidence-grid div, .process-list article, .essentials > div, .essentials-grid article, .planner-copy, .quote-form, .closing-cta, .faq-list details, .contact-panel"
+);
 
 function formatDate(value) {
   if (!value) return "";
@@ -66,8 +69,36 @@ function updatePreview() {
   preview.textContent = getFormMessage();
 }
 
+function setupReveal() {
+  if (!revealItems.length) return;
+
+  revealItems.forEach((item, index) => {
+    item.classList.add("reveal-item");
+    item.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 60}ms`);
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  revealItems.forEach((item) => observer.observe(item));
+}
+
 updateDefaultLinks();
 updatePreview();
+setupReveal();
 
 form?.addEventListener("input", updatePreview);
 
