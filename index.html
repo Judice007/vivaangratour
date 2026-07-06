@@ -8,7 +8,7 @@
       name="description"
       content="Passeios de lancha, ilhas e praias em Angra dos Reis com a Viva Angra Tour. Monte seu roteiro e fale direto pelo WhatsApp."
     />
-    <link rel="stylesheet" href="styles.css?v=24" />
+    <link rel="stylesheet" href="styles.css?v=39" />
   </head>
   <body>
     <header class="site-header" aria-label="Topo">
@@ -17,18 +17,24 @@
           <img src="assets/viva-angra-tour-logo.png?v=2" alt="Viva Angra Tour" />
         </span>
         <span>
-          <strong>Viva Angra Tour</strong>
-          <small>Angra dos Reis, RJ</small>
+          <strong>Passeios em Angra</strong>
+          <small>Lancha e Ilha Grande</small>
         </span>
       </a>
 
-      <nav class="main-nav" aria-label="Navegação principal">
+      <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
         <a href="#passeios">Passeios</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#roteiro">Roteiro</a>
         <a href="#duvidas">Dúvidas</a>
         <a href="#contato">Contato</a>
       </nav>
+
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <a class="header-action" data-whatsapp-link href="#" target="_blank" rel="noreferrer">
         Cotar
@@ -69,24 +75,103 @@
       <section class="hero" aria-labelledby="hero-title">
         <div class="hero-media" role="img" aria-label="Vista aérea das ilhas e águas claras de Angra dos Reis"></div>
         <div class="hero-overlay"></div>
+        <span class="hero-watermark hero-watermark-viva" aria-hidden="true">VIVA</span>
+        <span class="hero-watermark hero-watermark-angra" aria-hidden="true">Angra</span>
 
         <div class="hero-content">
-          <p class="eyebrow">Passeios locais em Angra dos Reis</p>
-          <h1 id="hero-title">Viva Angra Tour</h1>
-          <p class="hero-copy">
-            Roteiros de lancha em Angra e Ilha Grande, com atendimento direto, saídas combinadas e cotação pelo WhatsApp.
-          </p>
+          <div class="hero-copy-block">
+            <div class="hero-topline" aria-label="Resumo dos passeios">
+              <span>06 roteiros</span>
+              <span>Angra + Ilha Grande</span>
+              <span>média de 6h</span>
+            </div>
+            <p class="eyebrow">Passeios locais em Angra dos Reis</p>
+            <h1 id="hero-title" class="hero-brand-name">
+              <span class="hero-brand-viva">Viva</span>
+              <span class="hero-brand-angra">Angra</span>
+              <span class="hero-brand-tour">Tour</span>
+            </h1>
+            <p class="hero-copy">
+              Roteiros de lancha em Angra e Ilha Grande, com atendimento direto, saídas combinadas e cotação pelo WhatsApp.
+            </p>
 
-          <ul class="hero-points" aria-label="Destaques">
-            <li>Privativo ou compartilhado</li>
-            <li>Ilhas Paradisíacas, Lagoa Azul e Lado Frade</li>
-            <li>Cotação organizada pelo WhatsApp</li>
-          </ul>
+            <ul class="hero-points" aria-label="Destaques">
+              <li>Privativo ou compartilhado</li>
+              <li>Ilhas Paradisíacas, Lagoa Azul e Lado Frade</li>
+              <li>Cotação organizada pelo WhatsApp</li>
+            </ul>
 
-          <div class="hero-actions" aria-label="Ações principais">
-            <a class="button button-primary" href="#roteiro">Montar meu passeio</a>
-            <a class="button button-secondary" data-whatsapp-link href="#" target="_blank" rel="noreferrer">Falar com a Viva Angra</a>
+            <div class="hero-actions" aria-label="Ações principais">
+              <a class="button button-primary" href="#roteiro">Montar meu passeio</a>
+              <a class="button button-secondary" data-whatsapp-link href="#" target="_blank" rel="noreferrer">Falar com a Viva Angra</a>
+            </div>
           </div>
+
+          <aside class="hero-showcase" aria-label="Destaques visuais dos roteiros">
+            <div class="hero-showcase-label" aria-hidden="true">
+              <span>Roteiros em destaque</span>
+              <strong>Angra dos Reis</strong>
+            </div>
+            <div class="hero-route-carousel" aria-label="Roteiros em destaque">
+              <figure class="hero-route-card" style="--card: 0">
+                <img src="assets/ilhas-botinas.jpg" alt="Ilhas Botinas vistas do mar" />
+                <figcaption>
+                  <span>Banho e almoço</span>
+                  <strong>Ilhas Paradisíacas</strong>
+                </figcaption>
+              </figure>
+
+              <figure class="hero-route-card" style="--card: 1">
+                <img src="assets/lagoa-azul.jpg" alt="Lagoa Azul em Ilha Grande" />
+                <figcaption>
+                  <span>Roteiro para snorkel</span>
+                  <strong>Lagoa Azul</strong>
+                </figcaption>
+              </figure>
+
+              <figure class="hero-route-card" style="--card: 2">
+                <img src="assets/itanhaga-lado-frade.jpg" alt="Itanhagá no roteiro Lado Frade" />
+                <figcaption>
+                  <span>Saída pelo Frade</span>
+                  <strong>Lado Frade</strong>
+                </figcaption>
+              </figure>
+
+              <figure class="hero-route-card" style="--card: 3">
+                <img src="assets/lopes-mendes.jpg" alt="Praia de Lopes Mendes vista do alto" />
+                <figcaption>
+                  <span>Ilha Grande</span>
+                  <strong>Lopes Mendes</strong>
+                </figcaption>
+              </figure>
+
+              <figure class="hero-route-card" style="--card: 4">
+                <img src="assets/praia-do-aventureiro.jpg" alt="Praia do Aventureiro com coqueiro e mar claro" />
+                <figcaption>
+                  <span>Dia especial</span>
+                  <strong>Praia do Aventureiro</strong>
+                </figcaption>
+              </figure>
+
+              <figure class="hero-route-card" style="--card: 5">
+                <img src="assets/vila-do-abraao.png" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
+                <figcaption>
+                  <span>Vila e praias próximas</span>
+                  <strong>Abraão</strong>
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="hero-stat">
+              <span>Duração média</span>
+              <strong>6 horas</strong>
+            </div>
+
+            <div class="hero-route-note">
+              <span>Saídas</span>
+              <strong>Frade, Centro, Abraão e Araçatiba</strong>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -166,7 +251,7 @@
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/IlhaGrande-Abraao3.jpg/800px-IlhaGrande-Abraao3.jpg" alt="Porto do Abraão, Ilha Grande" />
+            <img src="assets/vila-do-abraao.png" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
               <figcaption>
                 <strong>Abraão</strong>
                 <span>Vila, cais e praias próximas</span>
@@ -222,7 +307,7 @@
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/IlhaGrande-Abraao3.jpg/800px-IlhaGrande-Abraao3.jpg" alt="" />
+              <img src="assets/vila-do-abraao.png" alt="" />
               <figcaption>
                 <strong>Abraão</strong>
                 <span>Vila, cais e praias próximas</span>
@@ -388,7 +473,7 @@
           </article>
 
           <article class="tour-card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/IlhaGrande-Abraao3.jpg/800px-IlhaGrande-Abraao3.jpg" alt="Porto do Abraão, Ilha Grande" />
+            <img src="assets/vila-do-abraao.png" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
             <div class="tour-card-body">
               <div>
                 <p class="tag">Ilha Grande</p>
@@ -424,7 +509,12 @@
         <div class="mood-copy">
           <p class="eyebrow">Experiência</p>
           <h2 id="mood-title">Angra no ritmo do seu grupo</h2>
-          <p>Do snorkel na Lagoa Azul ao mar aberto de Lopes Mendes, o roteiro muda conforme o tipo de dia que você quer viver.</p>
+          <p>Nem todo passeio precisa ter o mesmo ritmo. A gente ajuda a escolher entre um dia de snorkel, praias de mar calmo, almoço na Gipóia ou rotas mais preservadas da Ilha Grande.</p>
+          <ul class="mood-list" aria-label="Tipos de experiência">
+            <li>Banho e fotos em água clara</li>
+            <li>Paradas com estrutura para almoço</li>
+            <li>Roteiros ajustados ao mar do dia</li>
+          </ul>
         </div>
 
         <div class="mood-visuals" aria-label="Momentos do passeio">
@@ -432,21 +522,30 @@
             <img src="assets/cataguases-hero-web.jpg" alt="Água clara e ilhas vistas de cima" />
             <figcaption>
               <span>01</span>
-              <strong>Água clara</strong>
+              <div>
+                <strong>Água clara</strong>
+                <small>Paradas para banho, fotos e snorkel quando o mar ajuda.</small>
+              </div>
             </figcaption>
           </figure>
           <figure class="mood-card">
             <img src="assets/ilhas-botinas.jpg" alt="Ilhas Botinas em Angra dos Reis" />
             <figcaption>
               <span>02</span>
-              <strong>Paradas clássicas</strong>
+              <div>
+                <strong>Paradas clássicas</strong>
+                <small>Botinas, Gipóia e praias queridas de Angra.</small>
+              </div>
             </figcaption>
           </figure>
           <figure class="mood-card">
             <img src="assets/angra-panorama.jpg" alt="Barcos, praia e ilhas em Angra" />
             <figcaption>
               <span>03</span>
-              <strong>Saídas flexíveis</strong>
+              <div>
+                <strong>Saídas flexíveis</strong>
+                <small>Frade, Centro, Garatucaia e pontos da Ilha Grande.</small>
+              </div>
             </figcaption>
           </figure>
         </div>
@@ -680,26 +779,17 @@
       <div>
         <strong>Viva Angra Tour</strong>
         <span>Passeios em Angra dos Reis, RJ</span>
-        <small class="photo-credits">
-          Fotos:
-          <a href="https://commons.wikimedia.org/wiki/File:Angra_dos_Reis_-_panoramio.jpg" target="_blank" rel="noreferrer">Michael Karavanov</a>,
-          <a href="https://commons.wikimedia.org/wiki/File:Ilha_Botinas_by_Diego_Baravelli.jpg" target="_blank" rel="noreferrer">Diego Baravelli</a>
-          e
-          <a href="https://commons.wikimedia.org/wiki/File:IlhaGrande-Abraao3.jpg" target="_blank" rel="noreferrer">Fulviusbsas</a>
-          via Wikimedia Commons; demais fotos do acervo do cliente.
-        </small>
       </div>
       <a data-whatsapp-link href="#" target="_blank" rel="noreferrer">Falar no WhatsApp</a>
     </footer>
 
     <a class="floating-whatsapp" data-whatsapp-link href="#" target="_blank" rel="noreferrer" aria-label="Falar com a Viva Angra Tour pelo WhatsApp">
-      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-        <path d="M20.5 11.7a8.4 8.4 0 0 1-12.4 7.4l-4.1 1.1 1.1-4A8.4 8.4 0 1 1 20.5 11.7Z" />
-        <path d="M9.1 7.9c.2-.4.4-.4.7-.4h.5c.2 0 .5 0 .7.5l.8 1.8c.1.3.1.5-.1.7l-.4.5c-.1.2-.2.3-.1.5.4.8 1.1 1.5 1.9 2 .2.1.4.1.5-.1l.6-.7c.2-.2.4-.2.7-.1l1.7.8c.4.2.5.4.5.6 0 .7-.5 1.5-1.1 1.7-.6.3-1.5.3-2.9-.3-2.4-.9-4.4-2.9-5.3-5.2-.5-1.2-.4-1.9-.1-2.4Z" />
+      <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <path d="M16.02 4.01c-6.62 0-12 5.23-12 11.68 0 2.16.62 4.27 1.8 6.1L4 28l6.45-1.7a12.4 12.4 0 0 0 5.57 1.33c6.62 0 12-5.23 12-11.68S22.64 4.01 16.02 4.01Zm0 21.6c-1.78 0-3.52-.46-5.04-1.34l-.36-.21-3.83 1.01 1.02-3.62-.24-.37a9.66 9.66 0 0 1-1.51-5.16c0-5.34 4.47-9.69 9.96-9.69s9.96 4.35 9.96 9.69-4.47 9.69-9.96 9.69Zm5.46-7.26c-.3-.15-1.76-.85-2.03-.94-.27-.1-.47-.15-.67.15-.2.29-.77.94-.94 1.13-.17.2-.35.22-.65.07-.3-.15-1.27-.45-2.41-1.44-.89-.77-1.49-1.72-1.66-2.01-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.29.3-.49.1-.2.05-.37-.02-.52-.07-.15-.67-1.58-.92-2.16-.24-.56-.49-.49-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1-1.04 2.43s1.07 2.82 1.22 3.02c.15.2 2.11 3.13 5.12 4.39.72.3 1.28.48 1.71.61.72.22 1.38.19 1.9.12.58-.08 1.76-.7 2.01-1.38.25-.68.25-1.26.17-1.38-.07-.13-.27-.2-.57-.35Z" />
       </svg>
       <span class="sr-only">Falar no WhatsApp</span>
     </a>
 
-    <script src="script.js?v=7"></script>
+    <script src="script.js?v=8"></script>
   </body>
 </html>

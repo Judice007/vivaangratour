@@ -14,6 +14,9 @@ const preview = document.querySelector("#message-preview");
 const whatsappLinks = document.querySelectorAll("[data-whatsapp-link]");
 const instagramLinks = document.querySelectorAll("[data-instagram-link]");
 const tourLinks = document.querySelectorAll("[data-tour-link]");
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const mainNav = document.querySelector("#main-nav");
 const revealItems = document.querySelectorAll(
   ".section-heading, .route-strip div, .route-gallery, .tour-card, .mood-copy, .mood-card, .confidence-grid div, .process-list article, .essentials > div, .essentials-grid article, .planner-copy, .quote-form, .closing-cta, .faq-list details, .contact-panel"
 );
@@ -96,9 +99,33 @@ function setupReveal() {
   revealItems.forEach((item) => observer.observe(item));
 }
 
+function setMenuOpen(isOpen) {
+  siteHeader?.classList.toggle("menu-open", isOpen);
+  menuToggle?.setAttribute("aria-expanded", String(isOpen));
+  menuToggle?.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
+}
+
 updateDefaultLinks();
 updatePreview();
 setupReveal();
+
+menuToggle?.addEventListener("click", () => {
+  setMenuOpen(!siteHeader?.classList.contains("menu-open"));
+});
+
+mainNav?.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", () => setMenuOpen(false));
+});
+
+document.addEventListener("click", (event) => {
+  if (!siteHeader?.classList.contains("menu-open")) return;
+  if (siteHeader.contains(event.target)) return;
+  setMenuOpen(false);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") setMenuOpen(false);
+});
 
 form?.addEventListener("input", updatePreview);
 
