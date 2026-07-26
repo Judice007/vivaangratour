@@ -25,9 +25,19 @@ Este site e estatico. Para publicar, envie todos os arquivos desta pasta para um
 ## Arquivos principais
 
 - `index.html`: conteudo do site
-- `styles.css`: visual do site
+- `styles.css`: visual do site (arquivo fonte, editavel)
+- `styles.min.css`: versao minificada do `styles.css`, usada pelo `index.html` em producao
 - `script.js`: WhatsApp e mensagem automatica
 - `assets/`: imagens e logo
+
+### Editando o CSS
+
+O `index.html` carrega `styles.min.css` (menor, mais rapido) em vez de `styles.css`.
+Se voce editar `styles.css`, gere a versao minificada de novo antes de publicar:
+
+```
+npx clean-css-cli -O2 -o styles.min.css styles.css
+```
 
 ## Depois de publicar (dominio definido)
 
