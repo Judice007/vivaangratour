@@ -8,13 +8,16 @@
       name="description"
       content="Passeios de lancha, ilhas e praias em Angra dos Reis com a Viva Angra Tour. Monte seu roteiro e fale direto pelo WhatsApp."
     />
-    <link rel="stylesheet" href="styles.css?v=39" />
+    <meta name="theme-color" content="#021f4f" />
+    <link rel="icon" href="assets/viva-angra-tour-logo.png" type="image/png" />
+    <link rel="preload" as="image" href="assets/cataguases-hero-web.jpg" fetchpriority="high" />
+    <link rel="stylesheet" href="styles.min.css?v=1" />
   </head>
   <body>
     <header class="site-header" aria-label="Topo">
-      <a class="brand" href="#inicio" aria-label="Viva Angra Tour">
+      <a class="brand" href="#inicio">
         <span class="brand-logo-wrap">
-          <img src="assets/viva-angra-tour-logo.png?v=2" alt="Viva Angra Tour" />
+          <img src="assets/viva-angra-tour-logo.png?v=2" alt="Viva Angra Tour" width="506" height="424" />
         </span>
         <span>
           <strong>Passeios em Angra</strong>
@@ -114,7 +117,7 @@
             </div>
             <div class="hero-route-carousel" aria-label="Roteiros em destaque">
               <figure class="hero-route-card" style="--card: 0">
-                <img src="assets/ilhas-botinas.jpg" alt="Ilhas Botinas vistas do mar" />
+                <img src="assets/ilhas-botinas.jpg" decoding="async" loading="eager" fetchpriority="high" alt="Ilhas Botinas vistas do mar" />
                 <figcaption>
                   <span>Banho e almoço</span>
                   <strong>Ilhas Paradisíacas</strong>
@@ -122,7 +125,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 1">
-                <img src="assets/lagoa-azul.jpg" alt="Lagoa Azul em Ilha Grande" />
+                <img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="Lagoa Azul em Ilha Grande" />
                 <figcaption>
                   <span>Roteiro para snorkel</span>
                   <strong>Lagoa Azul</strong>
@@ -130,7 +133,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 2">
-                <img src="assets/itanhaga-lado-frade.jpg" alt="Itanhagá no roteiro Lado Frade" />
+                <img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="Itanhagá no roteiro Lado Frade" />
                 <figcaption>
                   <span>Saída pelo Frade</span>
                   <strong>Lado Frade</strong>
@@ -138,7 +141,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 3">
-                <img src="assets/lopes-mendes.jpg" alt="Praia de Lopes Mendes vista do alto" />
+                <img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="Praia de Lopes Mendes vista do alto" />
                 <figcaption>
                   <span>Ilha Grande</span>
                   <strong>Lopes Mendes</strong>
@@ -146,7 +149,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 4">
-                <img src="assets/praia-do-aventureiro.jpg" alt="Praia do Aventureiro com coqueiro e mar claro" />
+                <img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="Praia do Aventureiro com coqueiro e mar claro" />
                 <figcaption>
                   <span>Dia especial</span>
                   <strong>Praia do Aventureiro</strong>
@@ -154,7 +157,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 5">
-                <img src="assets/vila-do-abraao.png" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
+                <img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
                 <figcaption>
                   <span>Vila e praias próximas</span>
                   <strong>Abraão</strong>
@@ -202,112 +205,112 @@
         <div class="route-gallery" aria-label="Galeria de roteiros em Angra dos Reis">
           <div class="route-gallery-track">
             <figure class="route-photo-card">
-              <img src="assets/cataguases-hero-web.jpg" alt="Vista aérea de Cataguases e águas claras" />
+              <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="Vista aérea de Cataguases e águas claras" />
               <figcaption>
                 <strong>Cataguases</strong>
                 <span>Água clara e banco de areia</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/ilhas-botinas.jpg" alt="Ilhas Botinas vistas do mar" />
+              <img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="Ilhas Botinas vistas do mar" />
               <figcaption>
                 <strong>Ilhas Botinas</strong>
                 <span>Água clara perto da Gipóia</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/lagoa-azul.jpg" alt="Lagoa Azul com água clara e montanhas" />
+              <img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="Lagoa Azul com água clara e montanhas" />
               <figcaption>
                 <strong>Lagoa Azul</strong>
                 <span>Snorkel e água turquesa</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/cataguases-hero-web.jpg" alt="Ilhas e areia clara vistas de cima" />
+              <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="Ilhas e areia clara vistas de cima" />
               <figcaption>
                 <strong>Ilhas Paradisíacas</strong>
                 <span>Gipóia, Botinas e almoço</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/itanhaga-lado-frade.jpg" alt="Itanhagá no roteiro Lado Frade" />
+              <img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="Itanhagá no roteiro Lado Frade" />
               <figcaption>
                 <strong>Lado Frade</strong>
                 <span>Itanhagá e lado do Frade</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/lopes-mendes.jpg" alt="Praia de Lopes Mendes vista do alto" />
+              <img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="Praia de Lopes Mendes vista do alto" />
               <figcaption>
                 <strong>Lopes Mendes</strong>
                 <span>Praia oceânica e selvagem</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/praia-do-aventureiro.jpg" alt="Praia do Aventureiro com coqueiro e mar claro" />
+              <img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="Praia do Aventureiro com coqueiro e mar claro" />
               <figcaption>
                 <strong>Praia do Aventureiro</strong>
                 <span>Coqueiro famoso e mar aberto</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-            <img src="assets/vila-do-abraao.png" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
+            <img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
               <figcaption>
                 <strong>Abraão</strong>
                 <span>Vila, cais e praias próximas</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/cataguases-hero-web.jpg" alt="" />
+              <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="" />
               <figcaption>
                 <strong>Cataguases</strong>
                 <span>Água clara e banco de areia</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/ilhas-botinas.jpg" alt="" />
+              <img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="" />
               <figcaption>
                 <strong>Ilhas Botinas</strong>
                 <span>Água clara perto da Gipóia</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/lagoa-azul.jpg" alt="" />
+              <img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="" />
               <figcaption>
                 <strong>Lagoa Azul</strong>
                 <span>Snorkel e água turquesa</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/cataguases-hero-web.jpg" alt="" />
+              <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="" />
               <figcaption>
                 <strong>Ilhas Paradisíacas</strong>
                 <span>Gipóia, Botinas e almoço</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/itanhaga-lado-frade.jpg" alt="" />
+              <img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="" />
               <figcaption>
                 <strong>Lado Frade</strong>
                 <span>Itanhagá e lado do Frade</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/lopes-mendes.jpg" alt="" />
+              <img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="" />
               <figcaption>
                 <strong>Lopes Mendes</strong>
                 <span>Praia oceânica e selvagem</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/praia-do-aventureiro.jpg" alt="" />
+              <img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="" />
               <figcaption>
                 <strong>Praia do Aventureiro</strong>
                 <span>Coqueiro famoso e mar aberto</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/vila-do-abraao.png" alt="" />
+              <img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="" />
               <figcaption>
                 <strong>Abraão</strong>
                 <span>Vila, cais e praias próximas</span>
@@ -318,7 +321,7 @@
 
         <div class="tour-grid">
           <article class="tour-card">
-            <img src="assets/ilhas-botinas.jpg" alt="Ilhas Botinas vistas do mar" />
+            <img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="Ilhas Botinas vistas do mar" />
             <div class="tour-card-body">
               <div>
                 <p class="tag">Ilhas Paradisíacas</p>
@@ -349,7 +352,7 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/lagoa-azul.jpg" alt="Lagoa Azul com água clara e montanhas" />
+            <img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="Lagoa Azul com água clara e montanhas" />
             <div class="tour-card-body">
               <div>
                 <p class="tag">Lagoa Azul</p>
@@ -380,7 +383,7 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/itanhaga-lado-frade.jpg" alt="Itanhagá no roteiro Lado Frade" />
+            <img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="Itanhagá no roteiro Lado Frade" />
             <div class="tour-card-body">
               <div>
                 <p class="tag">Lado Frade</p>
@@ -411,7 +414,7 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/lopes-mendes.jpg" alt="Praia de Lopes Mendes vista do alto" />
+            <img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="Praia de Lopes Mendes vista do alto" />
             <div class="tour-card-body">
               <div>
                 <p class="tag">Ilha Grande</p>
@@ -442,7 +445,7 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/praia-do-aventureiro.jpg" alt="Praia do Aventureiro com coqueiro e mar claro" />
+            <img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="Praia do Aventureiro com coqueiro e mar claro" />
             <div class="tour-card-body">
               <div>
                 <p class="tag">Ilha Grande</p>
@@ -473,7 +476,7 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/vila-do-abraao.png" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
+            <img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
             <div class="tour-card-body">
               <div>
                 <p class="tag">Ilha Grande</p>
@@ -519,7 +522,7 @@
 
         <div class="mood-visuals" aria-label="Momentos do passeio">
           <figure class="mood-card mood-card-wide">
-            <img src="assets/cataguases-hero-web.jpg" alt="Água clara e ilhas vistas de cima" />
+            <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="Água clara e ilhas vistas de cima" />
             <figcaption>
               <span>01</span>
               <div>
@@ -529,7 +532,7 @@
             </figcaption>
           </figure>
           <figure class="mood-card">
-            <img src="assets/ilhas-botinas.jpg" alt="Ilhas Botinas em Angra dos Reis" />
+            <img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="Ilhas Botinas em Angra dos Reis" />
             <figcaption>
               <span>02</span>
               <div>
@@ -539,7 +542,7 @@
             </figcaption>
           </figure>
           <figure class="mood-card">
-            <img src="assets/angra-panorama.jpg" alt="Barcos, praia e ilhas em Angra" />
+            <img src="assets/angra-panorama.jpg" decoding="async" loading="lazy" alt="Barcos, praia e ilhas em Angra" />
             <figcaption>
               <span>03</span>
               <div>

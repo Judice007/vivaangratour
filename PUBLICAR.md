@@ -25,6 +25,31 @@ Este site e estatico. Para publicar, envie todos os arquivos desta pasta para um
 ## Arquivos principais
 
 - `index.html`: conteudo do site
-- `styles.css`: visual do site
+- `styles.css`: visual do site (arquivo fonte, editavel)
+- `styles.min.css`: versao minificada do `styles.css`, usada pelo `index.html` em producao
 - `script.js`: WhatsApp e mensagem automatica
 - `assets/`: imagens e logo
+
+### Editando o CSS
+
+O `index.html` carrega `styles.min.css` (menor, mais rapido) em vez de `styles.css`.
+Se voce editar `styles.css`, gere a versao minificada de novo antes de publicar:
+
+```
+npx clean-css-cli -O2 -o styles.min.css styles.css
+```
+
+## Depois de publicar (dominio definido)
+
+Com o site no ar em um dominio proprio, adicione no `<head>` do `index.html`:
+
+```html
+<link rel="canonical" href="https://SEU-DOMINIO/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://SEU-DOMINIO/" />
+<meta property="og:title" content="Viva Angra Tour | Passeios em Angra dos Reis" />
+<meta property="og:description" content="Passeios de lancha, ilhas e praias em Angra dos Reis com a Viva Angra Tour." />
+<meta property="og:image" content="https://SEU-DOMINIO/assets/cataguases-hero-web.jpg" />
+```
+
+Isso melhora o preview do link quando compartilhado no WhatsApp, Instagram etc.
