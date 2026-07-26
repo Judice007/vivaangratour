@@ -28,3 +28,18 @@ Este site e estatico. Para publicar, envie todos os arquivos desta pasta para um
 - `styles.css`: visual do site
 - `script.js`: WhatsApp e mensagem automatica
 - `assets/`: imagens e logo
+
+## Depois de publicar (dominio definido)
+
+Com o site no ar em um dominio proprio, adicione no `<head>` do `index.html`:
+
+```html
+<link rel="canonical" href="https://SEU-DOMINIO/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://SEU-DOMINIO/" />
+<meta property="og:title" content="Viva Angra Tour | Passeios em Angra dos Reis" />
+<meta property="og:description" content="Passeios de lancha, ilhas e praias em Angra dos Reis com a Viva Angra Tour." />
+<meta property="og:image" content="https://SEU-DOMINIO/assets/cataguases-hero-web.jpg" />
+```
+
+Isso melhora o preview do link quando compartilhado no WhatsApp, Instagram etc.
