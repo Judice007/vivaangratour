@@ -1086,8 +1086,7 @@ textarea {
   text-transform: uppercase;
 }
 
-.tour-card h3,
-.confidence h3 {
+.tour-card h3 {
   margin: 0;
   font-size: 1.08rem;
   line-height: 1.16;
@@ -1313,7 +1312,7 @@ textarea {
   line-height: 1.28;
 }
 
-.confidence {
+.testimonials {
   width: 100%;
   padding: 60px max(16px, calc((100% - var(--max)) / 2));
   background:
@@ -1321,31 +1320,47 @@ textarea {
     linear-gradient(180deg, transparent 0 72%, rgba(0, 169, 214, 0.08) 72% 100%);
 }
 
-.confidence-grid {
+.testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
-.confidence-grid div {
+.testimonial-card {
+  margin: 0;
   padding: 18px;
   background: rgba(255, 255, 255, 0.68);
-  border: 1px solid rgba(2, 31, 79, 0.1);
+  border: 1px dashed rgba(2, 31, 79, 0.28);
   border-radius: 8px;
 }
 
-.number {
-  display: block;
-  margin-bottom: 14px;
-  color: var(--reef);
-  font-size: 0.86rem;
-  font-weight: 900;
-}
-
-.confidence p {
-  margin: 10px 0 0;
+.testimonial-card blockquote {
+  margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.testimonial-card figcaption {
+  display: block;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.testimonial-card figcaption strong {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.testimonial-card figcaption span {
+  display: block;
+  margin-top: 2px;
+  color: var(--reef);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .process-list {
@@ -1400,7 +1415,8 @@ textarea {
 
 .essentials-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 420px;
   gap: 14px;
 }
 
@@ -1410,11 +1426,6 @@ textarea {
   color: var(--white);
   background: var(--ocean-dark);
   border-radius: 8px;
-}
-
-.essentials-grid article:nth-child(2) {
-  background: var(--ocean-dark);
-  border-top: 6px solid var(--ocean);
 }
 
 .essentials-grid ul {
@@ -1506,43 +1517,6 @@ textarea {
 .form-summary p {
   margin: 8px 0 0;
   color: var(--muted);
-}
-
-.closing-cta {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: center;
-  width: min(calc(100% - 32px), var(--max));
-  margin: 0 auto 24px;
-  padding: 26px;
-  color: var(--white);
-  background:
-    linear-gradient(90deg, rgba(2, 31, 79, 0.96), rgba(0, 169, 214, 0.82)),
-    url("assets/ilhas-botinas.jpg");
-  background-position: center;
-  background-size: cover;
-  border-radius: 8px;
-}
-
-.closing-cta div {
-  max-width: 760px;
-}
-
-.closing-cta .eyebrow {
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.closing-cta h2 {
-  margin: 0;
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
-  line-height: 1;
-}
-
-.closing-cta p {
-  margin: 12px 0 0;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 0.98rem;
 }
 
 .faq {
@@ -1923,7 +1897,7 @@ textarea {
   .route-strip,
   .tour-grid,
   .mood-section,
-  .confidence-grid,
+  .testimonials-grid,
   .process-list,
   .essentials,
   .essentials-grid,
@@ -2013,11 +1987,6 @@ textarea {
 
   .planner-copy {
     position: static;
-  }
-
-  .closing-cta {
-    align-items: stretch;
-    flex-direction: column;
   }
 }
 
@@ -2197,10 +2166,6 @@ textarea {
   .essentials-grid article,
   .process-list article {
     padding: 18px;
-  }
-
-  .closing-cta {
-    padding: 24px 18px;
   }
 
   .contact-panel {

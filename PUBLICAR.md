@@ -22,6 +22,15 @@ Este site e estatico. Para publicar, envie todos os arquivos desta pasta para um
    - os roteiros estao como `Valor sob consulta`
    - se quiser divulgar preco, substituir esse texto nos tres cards
 
+5. Depoimentos (secao "O que dizem os clientes"):
+   - os 3 cartoes estao com texto placeholder entre colchetes, ex.: `[Nome do cliente]`
+   - troque pelos depoimentos reais (WhatsApp, Google, Instagram) antes de publicar
+   - nao publique depoimento inventado
+
+6. Secao "Sobre nos":
+   - o texto atual e generico; revise com a historia real de voces (ha quanto tempo operam,
+     time, embarcacao) se quiser deixar mais pessoal
+
 ## Arquivos principais
 
 - `index.html`: conteudo do site
