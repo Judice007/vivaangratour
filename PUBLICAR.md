@@ -1,6 +1,37 @@
 # Viva Angra Tour - publicacao
 
-Este site e estatico. Para publicar, envie todos os arquivos desta pasta para uma hospedagem como Netlify, Vercel, Hostinger ou outro servidor com suporte a HTML/CSS/JS.
+Este site e estatico (HTML/CSS/JS puro, sem build).
+
+## Como o site fica no ar
+
+O codigo mora no GitHub (`github.com/Judice007/vivaangratour`) e esta conectado
+a Vercel. Isso quer dizer que **nao existe mais um passo manual de "enviar os
+arquivos pra hospedagem"**: toda vez que a branch `main` do GitHub muda, a
+Vercel publica a nova versao sozinha, em minutos.
+
+Fluxo normal de uma alteracao:
+
+1. A mudanca entra numa branch separada e abre um Pull Request (PR) no GitHub
+2. A Vercel gera automaticamente um link de preview daquele PR pra conferir
+   antes de publicar
+3. Ao dar merge do PR na `main`, a versao publica (o site real) e atualizada
+
+## Editando o site sem estar no computador
+
+Como tudo fica no GitHub, da pra mexer no site de qualquer lugar, so com
+celular ou tablet:
+
+- **Pelo Claude** - continue pedindo as alteracoes por aqui (app ou site do
+  Claude), do jeito que ja vem sendo feito. As mudancas sao commitadas e
+  enviadas pro GitHub automaticamente, e um PR e aberto pra revisao.
+- **Direto no site do GitHub** - abra `github.com/Judice007/vivaangratour`
+  no navegador do celular, entre no arquivo (ex.: `index.html`), toque no
+  icone de lapis pra editar e salve com "Commit changes". Funciona em
+  qualquer navegador, sem instalar nada.
+
+Nao e preciso usar OneDrive, Google Drive ou qualquer sincronizador de
+arquivos pra isso - eles ficariam desconectados desse fluxo de publicacao e
+so causariam confusao com versoes divergentes.
 
 ## Antes de divulgar
 
