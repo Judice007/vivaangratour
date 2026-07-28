@@ -1236,6 +1236,36 @@ textarea {
   content: "";
 }
 
+.safety-badges {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.safety-badges li {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.safety-badges strong {
+  display: block;
+  color: var(--ocean-dark);
+  font-size: 0.86rem;
+}
+
+.safety-badges span {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
 .mood-visuals {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(250px, 0.88fr);
