@@ -402,6 +402,10 @@ textarea {
 .hero-media {
   z-index: -2;
   background-image: url("assets/cataguases-hero-web.jpg");
+  background-image: image-set(
+    url("assets/cataguases-hero-web.webp") type("image/webp"),
+    url("assets/cataguases-hero-web.jpg") type("image/jpeg")
+  );
   background-position: center 34%;
   background-size: cover;
   opacity: 0.82;
@@ -1588,9 +1592,16 @@ textarea {
   align-items: stretch;
   padding: 24px;
   color: var(--white);
-  background:
+  background-color: var(--ocean-dark);
+  background-image:
     linear-gradient(110deg, rgba(2, 31, 79, 0.96), rgba(2, 31, 79, 0.82) 44%, rgba(0, 169, 214, 0.62)),
     url("assets/cataguases-hero-web.jpg");
+  background-image:
+    linear-gradient(110deg, rgba(2, 31, 79, 0.96), rgba(2, 31, 79, 0.82) 44%, rgba(0, 169, 214, 0.62)),
+    image-set(
+      url("assets/cataguases-hero-web.webp") type("image/webp"),
+      url("assets/cataguases-hero-web.jpg") type("image/jpeg")
+    );
   background-position: center;
   background-size: cover;
   border-radius: 8px;
@@ -2021,6 +2032,14 @@ textarea {
 }
 
 @media (max-width: 640px) {
+  .hero-media {
+    background-image: url("assets/cataguases-hero-web-mobile.jpg");
+    background-image: image-set(
+      url("assets/cataguases-hero-web-mobile.webp") type("image/webp"),
+      url("assets/cataguases-hero-web-mobile.jpg") type("image/jpeg")
+    );
+  }
+
   .scroll-ocean {
     opacity: 0.34;
   }

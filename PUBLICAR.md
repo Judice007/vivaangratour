@@ -17,6 +17,9 @@ Este site e estatico. Para publicar, envie todos os arquivos desta pasta para um
    - coloque as imagens em `assets/`
    - atualize os `src` dos cards em `index.html`
    - mantenha imagens largas, preferencialmente horizontais
+   - gere a versao `.webp` de cada foto nova (ver secao "Imagens" abaixo) e
+     adicione o `<picture><source>` correspondente, senao a foto carrega
+     so em JPG/PNG (mais pesado)
 
 4. Revisar valores:
    - os roteiros estao como `Valor sob consulta`
@@ -47,6 +50,27 @@ Se voce editar `styles.css`, gere a versao minificada de novo antes de publicar:
 ```
 npx clean-css-cli -O2 -o styles.min.css styles.css
 ```
+
+### Imagens
+
+Cada foto usada no site tem uma versao `.jpg` (compatibilidade) e uma `.webp`
+(menor, usada pelos navegadores atuais) referenciadas assim no HTML:
+
+```html
+<picture>
+  <source srcset="assets/nome-da-foto.webp" type="image/webp" />
+  <img src="assets/nome-da-foto.jpg" alt="..." />
+</picture>
+```
+
+Para gerar o `.webp` de uma foto nova:
+
+```
+python3 -c "from PIL import Image; Image.open('assets/nome-da-foto.jpg').convert('RGB').save('assets/nome-da-foto.webp', 'WEBP', quality=75, method=6)"
+```
+
+A imagem de fundo do hero (`cataguases-hero-web.jpg`) tem tambem uma versao
+`-mobile` menor, usada em telas pequenas via media query no `styles.css`.
 
 ## Depois de publicar (dominio definido)
 
