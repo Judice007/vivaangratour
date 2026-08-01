@@ -117,3 +117,8 @@ Com o site no ar em um dominio proprio, adicione no `<head>` do `index.html`:
 ```
 
 Isso melhora o preview do link quando compartilhado no WhatsApp, Instagram etc.
+
+Tambem atualize o bloco `<script type="application/ld+json">` (perto do fim do
+`<head>`): adicione `"url": "https://SEU-DOMINIO/"` e, se quiser, `"telephone"`
+com o numero real do WhatsApp (formato `+55...`). Esses dados ajudam o Google
+a entender e exibir melhor o negocio nas buscas.
