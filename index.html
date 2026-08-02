@@ -10,14 +10,29 @@
     />
     <meta name="theme-color" content="#021f4f" />
     <link rel="icon" href="assets/viva-angra-tour-logo.png" type="image/png" />
-    <link rel="preload" as="image" href="assets/cataguases-hero-web.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/cataguases-hero-web-mobile.webp" type="image/webp" media="(max-width: 640px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="assets/cataguases-hero-web.webp" type="image/webp" media="(min-width: 641px)" fetchpriority="high" />
     <link rel="stylesheet" href="styles.min.css?v=1" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Viva Angra Tour",
+        "description": "Passeios de lancha, ilhas e praias em Angra dos Reis e Ilha Grande, com atendimento direto e cotação pelo WhatsApp.",
+        "image": "assets/cataguases-hero-web.jpg",
+        "areaServed": {
+          "@type": "City",
+          "name": "Angra dos Reis"
+        },
+        "sameAs": ["https://www.instagram.com/vivaangratour/"]
+      }
+    </script>
   </head>
   <body>
     <header class="site-header" aria-label="Topo">
       <a class="brand" href="#inicio">
         <span class="brand-logo-wrap">
-          <img src="assets/viva-angra-tour-logo.png?v=2" alt="Viva Angra Tour" width="506" height="424" />
+          <picture><source srcset="assets/viva-angra-tour-logo.webp?v=4" type="image/webp" /><img src="assets/viva-angra-tour-logo.png?v=4" alt="Viva Angra Tour" width="160" height="134" /></picture>
         </span>
         <span>
           <strong>Passeios em Angra</strong>
@@ -117,7 +132,7 @@
             </div>
             <div class="hero-route-carousel" aria-label="Roteiros em destaque">
               <figure class="hero-route-card" style="--card: 0">
-                <img src="assets/ilhas-botinas.jpg" decoding="async" loading="eager" fetchpriority="high" alt="Ilhas Botinas vistas do mar" />
+                <picture><source srcset="assets/ilhas-botinas.webp" type="image/webp" /><img src="assets/ilhas-botinas.jpg" decoding="async" loading="eager" fetchpriority="high" alt="Ilhas Botinas vistas do mar" /></picture>
                 <figcaption>
                   <span>Banho e almoço</span>
                   <strong>Ilhas Paradisíacas</strong>
@@ -125,7 +140,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 1">
-                <img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="Lagoa Azul em Ilha Grande" />
+                <picture><source srcset="assets/lagoa-azul.webp" type="image/webp" /><img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="Lagoa Azul em Ilha Grande" /></picture>
                 <figcaption>
                   <span>Roteiro para snorkel</span>
                   <strong>Lagoa Azul</strong>
@@ -133,7 +148,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 2">
-                <img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="Itanhagá no roteiro Lado Frade" />
+                <picture><source srcset="assets/itanhaga-lado-frade.webp" type="image/webp" /><img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="Itanhagá no roteiro Lado Frade" /></picture>
                 <figcaption>
                   <span>Saída pelo Frade</span>
                   <strong>Lado Frade</strong>
@@ -141,7 +156,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 3">
-                <img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="Praia de Lopes Mendes vista do alto" />
+                <picture><source srcset="assets/lopes-mendes.webp" type="image/webp" /><img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="Praia de Lopes Mendes vista do alto" /></picture>
                 <figcaption>
                   <span>Ilha Grande</span>
                   <strong>Lopes Mendes</strong>
@@ -149,7 +164,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 4">
-                <img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="Praia do Aventureiro com coqueiro e mar claro" />
+                <picture><source srcset="assets/praia-do-aventureiro.webp" type="image/webp" /><img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="Praia do Aventureiro com coqueiro e mar claro" /></picture>
                 <figcaption>
                   <span>Dia especial</span>
                   <strong>Praia do Aventureiro</strong>
@@ -157,7 +172,7 @@
               </figure>
 
               <figure class="hero-route-card" style="--card: 5">
-                <img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
+                <picture><source srcset="assets/vila-do-abraao.webp" type="image/webp" /><img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="Vista aérea da Vila do Abraão, Ilha Grande" /></picture>
                 <figcaption>
                   <span>Vila e praias próximas</span>
                   <strong>Abraão</strong>
@@ -205,112 +220,112 @@
         <div class="route-gallery" aria-label="Galeria de roteiros em Angra dos Reis">
           <div class="route-gallery-track">
             <figure class="route-photo-card">
-              <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="Vista aérea de Cataguases e águas claras" />
+              <picture><source srcset="assets/cataguases-hero-web.webp" type="image/webp" /><img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="Vista aérea de Cataguases e águas claras" /></picture>
               <figcaption>
                 <strong>Cataguases</strong>
                 <span>Água clara e banco de areia</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="Ilhas Botinas vistas do mar" />
+              <picture><source srcset="assets/ilhas-botinas.webp" type="image/webp" /><img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="Ilhas Botinas vistas do mar" /></picture>
               <figcaption>
                 <strong>Ilhas Botinas</strong>
                 <span>Água clara perto da Gipóia</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="Lagoa Azul com água clara e montanhas" />
+              <picture><source srcset="assets/lagoa-azul.webp" type="image/webp" /><img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="Lagoa Azul com água clara e montanhas" /></picture>
               <figcaption>
                 <strong>Lagoa Azul</strong>
                 <span>Snorkel e água turquesa</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="Ilhas e areia clara vistas de cima" />
+              <picture><source srcset="assets/cataguases-hero-web.webp" type="image/webp" /><img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="Ilhas e areia clara vistas de cima" /></picture>
               <figcaption>
                 <strong>Ilhas Paradisíacas</strong>
                 <span>Gipóia, Botinas e almoço</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="Itanhagá no roteiro Lado Frade" />
+              <picture><source srcset="assets/itanhaga-lado-frade.webp" type="image/webp" /><img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="Itanhagá no roteiro Lado Frade" /></picture>
               <figcaption>
                 <strong>Lado Frade</strong>
                 <span>Itanhagá e lado do Frade</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="Praia de Lopes Mendes vista do alto" />
+              <picture><source srcset="assets/lopes-mendes.webp" type="image/webp" /><img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="Praia de Lopes Mendes vista do alto" /></picture>
               <figcaption>
                 <strong>Lopes Mendes</strong>
                 <span>Praia oceânica e selvagem</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-              <img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="Praia do Aventureiro com coqueiro e mar claro" />
+              <picture><source srcset="assets/praia-do-aventureiro.webp" type="image/webp" /><img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="Praia do Aventureiro com coqueiro e mar claro" /></picture>
               <figcaption>
                 <strong>Praia do Aventureiro</strong>
                 <span>Coqueiro famoso e mar aberto</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card">
-            <img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
+            <picture><source srcset="assets/vila-do-abraao.webp" type="image/webp" /><img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="Vista aérea da Vila do Abraão, Ilha Grande" /></picture>
               <figcaption>
                 <strong>Abraão</strong>
                 <span>Vila, cais e praias próximas</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="" />
+              <picture><source srcset="assets/cataguases-hero-web.webp" type="image/webp" /><img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="" /></picture>
               <figcaption>
                 <strong>Cataguases</strong>
                 <span>Água clara e banco de areia</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="" />
+              <picture><source srcset="assets/ilhas-botinas.webp" type="image/webp" /><img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="" /></picture>
               <figcaption>
                 <strong>Ilhas Botinas</strong>
                 <span>Água clara perto da Gipóia</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="" />
+              <picture><source srcset="assets/lagoa-azul.webp" type="image/webp" /><img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="" /></picture>
               <figcaption>
                 <strong>Lagoa Azul</strong>
                 <span>Snorkel e água turquesa</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="" />
+              <picture><source srcset="assets/cataguases-hero-web.webp" type="image/webp" /><img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="" /></picture>
               <figcaption>
                 <strong>Ilhas Paradisíacas</strong>
                 <span>Gipóia, Botinas e almoço</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="" />
+              <picture><source srcset="assets/itanhaga-lado-frade.webp" type="image/webp" /><img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="" /></picture>
               <figcaption>
                 <strong>Lado Frade</strong>
                 <span>Itanhagá e lado do Frade</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="" />
+              <picture><source srcset="assets/lopes-mendes.webp" type="image/webp" /><img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="" /></picture>
               <figcaption>
                 <strong>Lopes Mendes</strong>
                 <span>Praia oceânica e selvagem</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="" />
+              <picture><source srcset="assets/praia-do-aventureiro.webp" type="image/webp" /><img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="" /></picture>
               <figcaption>
                 <strong>Praia do Aventureiro</strong>
                 <span>Coqueiro famoso e mar aberto</span>
               </figcaption>
             </figure>
             <figure class="route-photo-card" aria-hidden="true">
-              <img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="" />
+              <picture><source srcset="assets/vila-do-abraao.webp" type="image/webp" /><img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="" /></picture>
               <figcaption>
                 <strong>Abraão</strong>
                 <span>Vila, cais e praias próximas</span>
@@ -321,21 +336,15 @@
 
         <div class="tour-grid">
           <article class="tour-card">
-            <img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="Ilhas Botinas vistas do mar" />
+            <picture><source srcset="assets/ilhas-botinas.webp" type="image/webp" /><img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="Ilhas Botinas vistas do mar" /></picture>
             <div class="tour-card-body">
               <div>
                 <p class="tag">Ilhas Paradisíacas</p>
                 <h3>Ilhas Paradisíacas</h3>
               </div>
               <p>Um clássico de Angra: banho nas Botinas, praias da Gipóia e almoço no Canto das Canoas, com tempo para fotos e paradas tranquilas.</p>
-              <ul class="tour-highlights">
-                <li>Botinas para banho</li>
-                <li>Flechas, Fazenda e Piedade</li>
-                <li>Almoço no Canto das Canoas</li>
-              </ul>
               <div class="tour-price">
                 <strong>Valor sob consulta</strong>
-                <span>Cotação por data, saída e tamanho do grupo</span>
               </div>
               <dl>
                 <div>
@@ -352,21 +361,15 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="Lagoa Azul com água clara e montanhas" />
+            <picture><source srcset="assets/lagoa-azul.webp" type="image/webp" /><img src="assets/lagoa-azul.jpg" decoding="async" loading="lazy" alt="Lagoa Azul com água clara e montanhas" /></picture>
             <div class="tour-card-body">
               <div>
                 <p class="tag">Lagoa Azul</p>
                 <h3>Roteiro Lagoa Azul</h3>
               </div>
               <p>Rota para quem quer água azul, máscara de snorkel e paradas rápidas para banho: Lagoa Azul, Grumixama, Freguesia de Santana e Cataguases.</p>
-              <ul class="tour-highlights">
-                <li>Snorkel na Lagoa Azul</li>
-                <li>Freguesia de Santana</li>
-                <li>Cataguases para fotos</li>
-              </ul>
               <div class="tour-price">
                 <strong>Valor sob consulta</strong>
-                <span>Cotação por data, saída e tamanho do grupo</span>
               </div>
               <dl>
                 <div>
@@ -383,21 +386,15 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="Itanhagá no roteiro Lado Frade" />
+            <picture><source srcset="assets/itanhaga-lado-frade.webp" type="image/webp" /><img src="assets/itanhaga-lado-frade.jpg" decoding="async" loading="lazy" alt="Itanhagá no roteiro Lado Frade" /></picture>
             <div class="tour-card-body">
               <div>
                 <p class="tag">Lado Frade</p>
                 <h3>Roteiro Lado Frade</h3>
               </div>
               <p>Boa opção para sair pelo Frade, com menos deslocamento e visual de costão: Pingo d'Água, Paquetá, Laboratório e Itanhagá.</p>
-              <ul class="tour-highlights">
-                <li>Costão de Itanhagá</li>
-                <li>Paquetá e Pingo d'Água</li>
-                <li>Praia do Laboratório</li>
-              </ul>
               <div class="tour-price">
                 <strong>Valor sob consulta</strong>
-                <span>Cotação por data, saída e tamanho do grupo</span>
               </div>
               <dl>
                 <div>
@@ -414,21 +411,15 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="Praia de Lopes Mendes vista do alto" />
+            <picture><source srcset="assets/lopes-mendes.webp" type="image/webp" /><img src="assets/lopes-mendes.jpg" decoding="async" loading="lazy" alt="Praia de Lopes Mendes vista do alto" /></picture>
             <div class="tour-card-body">
               <div>
                 <p class="tag">Ilha Grande</p>
                 <h3>Lopes Mendes</h3>
               </div>
               <p>Uma das praias mais famosas da Ilha Grande: faixa longa de areia clara, mar oceânico e visual preservado. Acesso sempre alinhado ao mar do dia.</p>
-              <ul class="tour-highlights">
-                <li>Areia clara e praia extensa</li>
-                <li>Mar oceânico</li>
-                <li>Natureza preservada</li>
-              </ul>
               <div class="tour-price">
                 <strong>Valor sob consulta</strong>
-                <span>Cotação por saída, mar e logística do dia</span>
               </div>
               <dl>
                 <div>
@@ -445,21 +436,15 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="Praia do Aventureiro com coqueiro e mar claro" />
+            <picture><source srcset="assets/praia-do-aventureiro.webp" type="image/webp" /><img src="assets/praia-do-aventureiro.jpg" decoding="async" loading="lazy" alt="Praia do Aventureiro com coqueiro e mar claro" /></picture>
             <div class="tour-card-body">
               <div>
                 <p class="tag">Ilha Grande</p>
                 <h3>Praia do Aventureiro</h3>
               </div>
               <p>Roteiro para o lado mais preservado da Ilha Grande, com o coqueiro famoso, comunidade caiçara e navegação confirmada conforme mar e logística.</p>
-              <ul class="tour-highlights">
-                <li>Coqueiro do Aventureiro</li>
-                <li>Comunidade caiçara</li>
-                <li>Mar e logística alinhados</li>
-              </ul>
               <div class="tour-price">
                 <strong>Valor sob consulta</strong>
-                <span>Cotação conforme embarque e previsão</span>
               </div>
               <dl>
                 <div>
@@ -476,21 +461,15 @@
           </article>
 
           <article class="tour-card">
-            <img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="Vista aérea da Vila do Abraão, Ilha Grande" />
+            <picture><source srcset="assets/vila-do-abraao.webp" type="image/webp" /><img src="assets/vila-do-abraao.jpg" decoding="async" loading="lazy" alt="Vista aérea da Vila do Abraão, Ilha Grande" /></picture>
             <div class="tour-card-body">
               <div>
                 <p class="tag">Ilha Grande</p>
                 <h3>Abraão</h3>
               </div>
               <p>A porta de entrada da Ilha Grande: vila com cais, restaurantes, movimento de barcos e praias próximas para um passeio mais leve e estruturado.</p>
-              <ul class="tour-highlights">
-                <li>Vila e cais do Abraão</li>
-                <li>Praias próximas</li>
-                <li>Estrutura na ilha</li>
-              </ul>
               <div class="tour-price">
                 <strong>Valor sob consulta</strong>
-                <span>Cotação por grupo e ponto de saída</span>
               </div>
               <dl>
                 <div>
@@ -508,45 +487,60 @@
         </div>
       </section>
 
-      <section class="section mood-section" aria-labelledby="mood-title">
+      <section class="section mood-section" id="sobre" aria-labelledby="about-title">
         <div class="mood-copy">
-          <p class="eyebrow">Experiência</p>
-          <h2 id="mood-title">Angra no ritmo do seu grupo</h2>
-          <p>Nem todo passeio precisa ter o mesmo ritmo. A gente ajuda a escolher entre um dia de snorkel, praias de mar calmo, almoço na Gipóia ou rotas mais preservadas da Ilha Grande.</p>
-          <ul class="mood-list" aria-label="Tipos de experiência">
-            <li>Banho e fotos em água clara</li>
-            <li>Paradas com estrutura para almoço</li>
-            <li>Roteiros ajustados ao mar do dia</li>
+          <p class="eyebrow">Sobre nós</p>
+          <h2 id="about-title">Quem toca os seus passeios</h2>
+          <p>A Viva Angra Tour é local: cada roteiro é combinado direto com quem pilota, sem central de atendimento genérica. A gente acompanha maré, vento e sol antes de confirmar a saída, pra sua experiência ser aproveitada com segurança.</p>
+          <ul class="mood-list" aria-label="Como trabalhamos">
+            <li>Atendimento direto com quem pilota o barco</li>
+            <li>Roteiro ajustado ao mar e ao seu grupo</li>
+            <li>Passeios privativos ou compartilhados</li>
+          </ul>
+
+          <ul class="safety-badges" aria-label="Segurança">
+            <li>
+              <strong>Marinheiros habilitados</strong>
+              <span>Embarcações operadas por marinheiros parceiros habilitados pela Marinha do Brasil</span>
+            </li>
+            <li>
+              <strong>Coletes para todos</strong>
+              <span>Colete salva-vidas disponível para 100% dos passageiros em toda saída</span>
+            </li>
+            <li>
+              <strong>Embarcação segurada</strong>
+              <span>Seguro vigente durante o passeio</span>
+            </li>
           </ul>
         </div>
 
-        <div class="mood-visuals" aria-label="Momentos do passeio">
+        <div class="mood-visuals" aria-label="A operação da Viva Angra Tour">
           <figure class="mood-card mood-card-wide">
-            <img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="Água clara e ilhas vistas de cima" />
+            <picture><source srcset="assets/cataguases-hero-web.webp" type="image/webp" /><img src="assets/cataguases-hero-web.jpg" decoding="async" loading="lazy" alt="Água clara e ilhas vistas de cima" /></picture>
             <figcaption>
               <span>01</span>
               <div>
-                <strong>Água clara</strong>
-                <small>Paradas para banho, fotos e snorkel quando o mar ajuda.</small>
+                <strong>Operação local</strong>
+                <small>Passeios feitos e combinados em Angra dos Reis, sem intermediários.</small>
               </div>
             </figcaption>
           </figure>
           <figure class="mood-card">
-            <img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="Ilhas Botinas em Angra dos Reis" />
+            <picture><source srcset="assets/ilhas-botinas.webp" type="image/webp" /><img src="assets/ilhas-botinas.jpg" decoding="async" loading="lazy" alt="Ilhas Botinas em Angra dos Reis" /></picture>
             <figcaption>
               <span>02</span>
               <div>
-                <strong>Paradas clássicas</strong>
-                <small>Botinas, Gipóia e praias queridas de Angra.</small>
+                <strong>Rotina no mar</strong>
+                <small>Saída, paradas e retorno pensados pra cada roteiro.</small>
               </div>
             </figcaption>
           </figure>
           <figure class="mood-card">
-            <img src="assets/angra-panorama.jpg" decoding="async" loading="lazy" alt="Barcos, praia e ilhas em Angra" />
+            <picture><source srcset="assets/angra-panorama.webp" type="image/webp" /><img src="assets/angra-panorama.jpg" decoding="async" loading="lazy" alt="Barcos, praia e ilhas em Angra" /></picture>
             <figcaption>
               <span>03</span>
               <div>
-                <strong>Saídas flexíveis</strong>
+                <strong>Saídas espalhadas</strong>
                 <small>Frade, Centro, Garatucaia e pontos da Ilha Grande.</small>
               </div>
             </figcaption>
@@ -554,28 +548,40 @@
         </div>
       </section>
 
-      <section class="section confidence" aria-labelledby="confidence-title">
+      <section class="section testimonials" id="depoimentos" aria-labelledby="testimonials-title">
         <div class="section-heading compact">
-          <p class="eyebrow">Por que fechar com a gente</p>
-          <h2 id="confidence-title">Escolha com clareza</h2>
+          <p class="eyebrow">Depoimentos</p>
+          <h2 id="testimonials-title">O que dizem os clientes</h2>
         </div>
 
-        <div class="confidence-grid">
-          <div>
-            <span class="number">01</span>
-            <h3>Atendimento local</h3>
-            <p>Clima, maré, saída e perfil do passeio alinhados antes da reserva.</p>
-          </div>
-          <div>
-            <span class="number">02</span>
-            <h3>Cotação objetiva</h3>
-            <p>Valor, duração, ponto de encontro e itens inclusos em uma mensagem clara.</p>
-          </div>
-          <div>
-            <span class="number">03</span>
-            <h3>Roteiro ajustável</h3>
-            <p>Privativo, casal, família ou grupo: o ritmo acompanha sua viagem.</p>
-          </div>
+        <div class="testimonials-grid">
+          <figure class="testimonial-card">
+            <blockquote>
+              <p>“[Espaço reservado para um depoimento real de cliente — substitua antes de publicar.]”</p>
+            </blockquote>
+            <figcaption>
+              <strong>[Nome do cliente]</strong>
+              <span>[Roteiro feito]</span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote>
+              <p>“[Espaço reservado para um depoimento real de cliente — substitua antes de publicar.]”</p>
+            </blockquote>
+            <figcaption>
+              <strong>[Nome do cliente]</strong>
+              <span>[Roteiro feito]</span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial-card">
+            <blockquote>
+              <p>“[Espaço reservado para um depoimento real de cliente — substitua antes de publicar.]”</p>
+            </blockquote>
+            <figcaption>
+              <strong>[Nome do cliente]</strong>
+              <span>[Roteiro feito]</span>
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -613,7 +619,7 @@
       </section>
 
       <section class="section essentials" aria-labelledby="essentials-title">
-        <div>
+        <div class="section-heading compact">
           <p class="eyebrow">Antes de sair</p>
           <h2 id="essentials-title">Leve o essencial</h2>
         </div>
@@ -625,14 +631,6 @@
               <li>Documento, protetor solar e toalha</li>
               <li>Roupa leve e troca seca</li>
               <li>Água e remédio pessoal</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Combinamos antes</h3>
-            <ul>
-              <li>Frade, Garatucaia e Centro de Angra</li>
-              <li>Ilha Grande: Abraão, Praia Vermelha e Araçatiba</li>
-              <li>Roteiro, duração e extras combinados antes</li>
             </ul>
           </article>
         </div>
@@ -701,15 +699,6 @@
 
           <button class="button button-primary wide" type="submit">Enviar pelo WhatsApp</button>
         </form>
-      </section>
-
-      <section class="closing-cta" aria-labelledby="closing-title">
-        <div>
-          <p class="eyebrow">Próximo passo</p>
-          <h2 id="closing-title">Quer encaminhar seu passeio hoje?</h2>
-          <p>Mande data, grupo e roteiro. A gente organiza a melhor opção para você.</p>
-        </div>
-        <a class="button button-primary" data-whatsapp-link href="#" target="_blank" rel="noreferrer">Começar cotação</a>
       </section>
 
       <section class="section faq" id="duvidas" aria-labelledby="faq-title">

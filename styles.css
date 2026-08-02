@@ -402,6 +402,10 @@ textarea {
 .hero-media {
   z-index: -2;
   background-image: url("assets/cataguases-hero-web.jpg");
+  background-image: image-set(
+    url("assets/cataguases-hero-web.webp") type("image/webp"),
+    url("assets/cataguases-hero-web.jpg") type("image/jpeg")
+  );
   background-position: center 34%;
   background-size: cover;
   opacity: 0.82;
@@ -1086,8 +1090,7 @@ textarea {
   text-transform: uppercase;
 }
 
-.tour-card h3,
-.confidence h3 {
+.tour-card h3 {
   margin: 0;
   font-size: 1.08rem;
   line-height: 1.16;
@@ -1100,30 +1103,6 @@ textarea {
   line-height: 1.42;
 }
 
-.tour-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  color: var(--ink);
-  font-size: 0.75rem;
-  font-weight: 800;
-  list-style: none;
-}
-
-.tour-highlights li {
-  padding: 4px 7px;
-  color: var(--ocean-dark);
-  background: rgba(0, 169, 214, 0.1);
-  border: 1px solid rgba(0, 169, 214, 0.14);
-  border-radius: 5px;
-}
-
-.tour-highlights li::before {
-  display: none;
-}
-
 .tour-price {
   padding: 8px 10px;
   background: rgba(246, 251, 255, 0.8);
@@ -1131,21 +1110,11 @@ textarea {
   border-radius: 8px;
 }
 
-.tour-price strong,
-.tour-price span {
-  display: block;
-}
-
 .tour-price strong {
+  display: block;
   color: var(--ocean-dark);
   font-size: 0.9rem;
   font-weight: 900;
-}
-
-.tour-price span {
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 0.76rem;
 }
 
 .tour-card dl {
@@ -1237,6 +1206,36 @@ textarea {
   content: "";
 }
 
+.safety-badges {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.safety-badges li {
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.safety-badges strong {
+  display: block;
+  color: var(--ocean-dark);
+  font-size: 0.86rem;
+}
+
+.safety-badges span {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
 .mood-visuals {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(250px, 0.88fr);
@@ -1313,7 +1312,7 @@ textarea {
   line-height: 1.28;
 }
 
-.confidence {
+.testimonials {
   width: 100%;
   padding: 60px max(16px, calc((100% - var(--max)) / 2));
   background:
@@ -1321,31 +1320,47 @@ textarea {
     linear-gradient(180deg, transparent 0 72%, rgba(0, 169, 214, 0.08) 72% 100%);
 }
 
-.confidence-grid {
+.testimonials-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
 }
 
-.confidence-grid div {
+.testimonial-card {
+  margin: 0;
   padding: 18px;
   background: rgba(255, 255, 255, 0.68);
-  border: 1px solid rgba(2, 31, 79, 0.1);
+  border: 1px dashed rgba(2, 31, 79, 0.28);
   border-radius: 8px;
 }
 
-.number {
-  display: block;
-  margin-bottom: 14px;
-  color: var(--reef);
-  font-size: 0.86rem;
-  font-weight: 900;
-}
-
-.confidence p {
-  margin: 10px 0 0;
+.testimonial-card blockquote {
+  margin: 0;
   color: var(--muted);
   font-size: 0.92rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.testimonial-card figcaption {
+  display: block;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.testimonial-card figcaption strong {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.testimonial-card figcaption span {
+  display: block;
+  margin-top: 2px;
+  color: var(--reef);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .process-list {
@@ -1385,22 +1400,13 @@ textarea {
 }
 
 .essentials {
-  display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
-  gap: 28px;
-  align-items: start;
   padding-top: 12px;
-}
-
-.essentials h2 {
-  margin: 0;
-  font-size: clamp(1.9rem, 3.5vw, 3.05rem);
-  line-height: 1;
 }
 
 .essentials-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 420px;
   gap: 14px;
 }
 
@@ -1410,11 +1416,6 @@ textarea {
   color: var(--white);
   background: var(--ocean-dark);
   border-radius: 8px;
-}
-
-.essentials-grid article:nth-child(2) {
-  background: var(--ocean-dark);
-  border-top: 6px solid var(--ocean);
 }
 
 .essentials-grid ul {
@@ -1508,43 +1509,6 @@ textarea {
   color: var(--muted);
 }
 
-.closing-cta {
-  display: flex;
-  justify-content: space-between;
-  gap: 18px;
-  align-items: center;
-  width: min(calc(100% - 32px), var(--max));
-  margin: 0 auto 24px;
-  padding: 26px;
-  color: var(--white);
-  background:
-    linear-gradient(90deg, rgba(2, 31, 79, 0.96), rgba(0, 169, 214, 0.82)),
-    url("assets/ilhas-botinas.jpg");
-  background-position: center;
-  background-size: cover;
-  border-radius: 8px;
-}
-
-.closing-cta div {
-  max-width: 760px;
-}
-
-.closing-cta .eyebrow {
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.closing-cta h2 {
-  margin: 0;
-  font-size: clamp(1.65rem, 3vw, 2.35rem);
-  line-height: 1;
-}
-
-.closing-cta p {
-  margin: 12px 0 0;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 0.98rem;
-}
-
 .faq {
   padding-top: 28px;
 }
@@ -1584,9 +1548,16 @@ textarea {
   align-items: stretch;
   padding: 24px;
   color: var(--white);
-  background:
+  background-color: var(--ocean-dark);
+  background-image:
     linear-gradient(110deg, rgba(2, 31, 79, 0.96), rgba(2, 31, 79, 0.82) 44%, rgba(0, 169, 214, 0.62)),
     url("assets/cataguases-hero-web.jpg");
+  background-image:
+    linear-gradient(110deg, rgba(2, 31, 79, 0.96), rgba(2, 31, 79, 0.82) 44%, rgba(0, 169, 214, 0.62)),
+    image-set(
+      url("assets/cataguases-hero-web.webp") type("image/webp"),
+      url("assets/cataguases-hero-web.jpg") type("image/jpeg")
+    );
   background-position: center;
   background-size: cover;
   border-radius: 8px;
@@ -1923,9 +1894,8 @@ textarea {
   .route-strip,
   .tour-grid,
   .mood-section,
-  .confidence-grid,
+  .testimonials-grid,
   .process-list,
-  .essentials,
   .essentials-grid,
   .planner {
     grid-template-columns: 1fr;
@@ -2014,14 +1984,17 @@ textarea {
   .planner-copy {
     position: static;
   }
-
-  .closing-cta {
-    align-items: stretch;
-    flex-direction: column;
-  }
 }
 
 @media (max-width: 640px) {
+  .hero-media {
+    background-image: url("assets/cataguases-hero-web-mobile.jpg");
+    background-image: image-set(
+      url("assets/cataguases-hero-web-mobile.webp") type("image/webp"),
+      url("assets/cataguases-hero-web-mobile.jpg") type("image/jpeg")
+    );
+  }
+
   .scroll-ocean {
     opacity: 0.34;
   }
@@ -2197,10 +2170,6 @@ textarea {
   .essentials-grid article,
   .process-list article {
     padding: 18px;
-  }
-
-  .closing-cta {
-    padding: 24px 18px;
   }
 
   .contact-panel {
