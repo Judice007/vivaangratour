@@ -1400,17 +1400,7 @@ textarea {
 }
 
 .essentials {
-  display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
-  gap: 28px;
-  align-items: start;
   padding-top: 12px;
-}
-
-.essentials h2 {
-  margin: 0;
-  font-size: clamp(1.9rem, 3.5vw, 3.05rem);
-  line-height: 1;
 }
 
 .essentials-grid {
@@ -1906,7 +1896,6 @@ textarea {
   .mood-section,
   .testimonials-grid,
   .process-list,
-  .essentials,
   .essentials-grid,
   .planner {
     grid-template-columns: 1fr;
