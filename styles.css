@@ -1103,30 +1103,6 @@ textarea {
   line-height: 1.42;
 }
 
-.tour-highlights {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin: 0;
-  padding: 0;
-  color: var(--ink);
-  font-size: 0.75rem;
-  font-weight: 800;
-  list-style: none;
-}
-
-.tour-highlights li {
-  padding: 4px 7px;
-  color: var(--ocean-dark);
-  background: rgba(0, 169, 214, 0.1);
-  border: 1px solid rgba(0, 169, 214, 0.14);
-  border-radius: 5px;
-}
-
-.tour-highlights li::before {
-  display: none;
-}
-
 .tour-price {
   padding: 8px 10px;
   background: rgba(246, 251, 255, 0.8);
@@ -1134,21 +1110,11 @@ textarea {
   border-radius: 8px;
 }
 
-.tour-price strong,
-.tour-price span {
-  display: block;
-}
-
 .tour-price strong {
+  display: block;
   color: var(--ocean-dark);
   font-size: 0.9rem;
   font-weight: 900;
-}
-
-.tour-price span {
-  margin-top: 2px;
-  color: var(--muted);
-  font-size: 0.76rem;
 }
 
 .tour-card dl {
